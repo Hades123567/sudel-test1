@@ -5,25 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tentang Kami - SMA Unggul Del</title>
 
-  <!-- Fonts -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    /* ================= GLOBAL ================= */
+    <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Inter', sans-serif;
       color: #111827;
       line-height: 1.6;
       background: #ffffff;
     }
-
-    /* ================= HEADER ================= */
     header {
       position: fixed;
       top: 0;
@@ -32,7 +27,6 @@
       border-bottom: 1px solid #e5e7eb;
       z-index: 100;
     }
-
     nav {
       line-height: 1;
       max-width: 1400px;
@@ -42,25 +36,21 @@
       align-items: center;
       justify-content: space-between;
     }
-
     .logo img {
       height: 60px;
     }
-
     nav ul {
       list-style: none;
       display: flex;
       align-items: center;
       gap: 2.2rem;
     }
-
     nav a {
       text-decoration: none;
       color: #111827;
       font-weight: 500;
       font-size: 0.95rem;
     }
-
     .nav-cta {
       background: #3b5aa3;
       color: #ffffff !important;
@@ -68,8 +58,6 @@
       border-radius: 999px;
       font-weight: 600;
     }
-
-    /* ================= HERO SECTION ================= */
     .hero-section {
       margin-top: 85px;
       position: relative;
@@ -78,34 +66,28 @@
       display: flex;
       align-items: center;
     }
-
-    /* Dark overlay */
     .hero-section::before {
       content: "";
       position: absolute;
       inset: 0;
       background: rgba(0, 0, 0, 0.55);
     }
-
     .hero-content {
       position: relative;
       max-width: 900px;
       padding: 0 10%;
       color: #ffffff;
     }
-
     .hero-content h2 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin-bottom: 1.2rem;
     }
-
     .hero-content p {
       font-size: 1.15rem;
       line-height: 1.8;
       max-width: 700px;
     }
-
     .hero-accent {
       width: 60px;
       height: 4px;
@@ -117,23 +99,18 @@
       font-size: 1.05rem;
       line-height: 1.8;
     }
-
     .mission-list li {
       margin-bottom: 0.6rem;
     }
-
-    /* ================= CONTENT SECTION ================= */
     .content-section {
       max-width: 1200px;
       margin: auto;
       padding: 80px 10% 60px;
     }
-
     .text-block {
       font-size: 1.1rem;
       margin-bottom: 2rem;
     }
-
     h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
@@ -143,29 +120,23 @@
     .content-section {
       max-width: 1200px;
       margin: auto;
-      padding: 80px 5% 60px; /* Adjusted padding for better fit */
+      padding: 80px 5% 60px; 
     }
-
-    /* Flex container to hold text and images side by side */
     .vision-mission-container {
       display: flex;
       gap: 40px;
       align-items: center;
     }
-
     .text-block {
-      flex: 2; /* Takes up more space for text */
+      flex: 2; 
       font-size: 1.1rem;
     }
-
-    /* Sidebar for the two vertical images */
     .image-sidebar {
-      flex: 1; /* Takes up less space for images */
+      flex: 1; 
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-
     .image-sidebar img {
       width: 100%;
       height: auto;
@@ -173,15 +144,11 @@
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-
-    /* Responsive adjustment for mobile */
     @media (max-width: 768px) {
       .vision-mission-container {
         flex-direction: column;
       }
     }
-
-    /* ================= FOOTER ================= */
     footer {
       background: #ffffff;
       border-top: 1px solid #e5e7eb;
@@ -193,15 +160,13 @@
 </head>
 
 <body>
-
-  <!-- ================= HEADER ================= -->
   <header>
     <nav>
       <div class="logo">
         <img src="Images/title_card.png" alt="SMA Unggul Del Logo">
       </div>
       <ul>
-        <li><a href="website.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Tentang Kami</a></li>
         <li><a href="program.html">Program</a></li>
         <li><a href="kegiatan.html">Kegiatan</a></li>
@@ -209,8 +174,6 @@
       </ul>
     </nav>
   </header>
-
-  <!-- ================= HERO BACKGROUND SECTION ================= -->
   <section class="hero-section">
     <div class="hero-content">
       <div class="hero-accent"></div>
@@ -224,8 +187,6 @@
       </p>
     </div>
   </section>
-
-  <!-- ================= WHITE CONTENT CONTINUATION ================= -->
   <main class="content-section">
   <div class="vision-mission-container">
     
@@ -245,16 +206,12 @@
         <li>Mengembangkan seni dan budaya daerah untuk mendukung kualitas SMA Unggul Del.</li>
       </ul>
     </div>
-
     <aside class="image-sidebar">
       <img src="Images/aboutus_1.JPG" alt="Aktivitas Siswa 1">
       <img src="Images/aboutus_2.JPG" alt="Aktivitas Siswa 1">
     </aside>
-
   </div>
 </main>
-
-  <!-- ================= FOOTER ================= -->
   <footer>
     <p>© 2026 SMA Unggul Del. All rights reserved.</p>
   </footer>

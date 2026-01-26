@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Details - SMA Unggul Del</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 100;
+    }
+
+    nav {
+      line-height: 1;
+      max-width: 1400px;
+      margin: auto;
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-cta {
+      background: #3b5aa3;
+      color: #ffffff !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* ================= LAYOUT ================= */
+    .container {
+      display: flex;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      position: sticky;
+      top: 120px;
+      padding-right: 2rem;
+      border-right: 1px solid #e5e7eb;
+      height: calc(100vh - 120px);
+    }
+
+    .sidebar h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin-bottom: 1rem;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+
+    .sidebar a:hover {
+      color: #2f4a88;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 0 0 80px 4rem;
+      padding-top: 120px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+
+    .content-block {
+      margin-bottom: 5rem;
+      scroll-margin-top: 120px;
+    }
+
+    .block-heading {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .block-heading::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 50%;
+      height: 2px;
+      background: #2f4a88;
+    }
+
+    .content-block p {
+      font-size: 1.05rem;
+      color: #374151;
+      margin-bottom: 1.5rem;
+      max-width: 720px;
+    }
+
+    /* Images */
+    .content-image-wrapper {
+      margin: 2.5rem 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .body-image {
+      max-width: 50%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* Table */
+    .guru-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .guru-table th,
+    .guru-table td {
+      border: 1px solid #d1d5db;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    .guru-table th {
+      background: #f9fafb;
+      font-weight: 600;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      padding: 2rem;
+      color: #374151;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 1024px) {
+      .sidebar {
+        display: none;
+      }
+
+      .main-content {
+        padding-left: 0;
+      }
+
+      .body-image {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">
+      <img src="Images/title_card.png" alt="SMA Unggul Del Logo">
+    </div>
+    <ul>
+      <li><a href="website.html">Home</a></li>
+      <li><a href="about.html">Tentang Kami</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="kegiatan.html">Kegiatan</a></li>
+      <li><a href="pota.html" class="nav-cta">POTA</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <aside class="sidebar">
+    <h3>Quick Navigation</h3>
+    <ul>
+      <li><a href="#kurikulum">Kurikulum</a></li>
+      <li><a href="#tenaga">Tenaga Pendidik</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <h1 class="section-title">Departemen Akademik SMA Unggul Del</h1>
+
+    <section id="kurikulum" class="content-block">
+      <h2 class="block-heading">Kurikulum</h2>
+      <p>SMA Unggul Del menerapkan Kurikulum Merdeka yang disusun dan dikembangkan sesuai dengan kebijakan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia. Kurikulum ini dipadukan dengan penguatan Kurikulum Cambridge pada mata pelajaran Bahasa Inggris untuk meningkatkan kompetensi global siswa. Proses pembelajaran dirancang untuk mendorong kemampuan berpikir tingkat tinggi atau High Order Thinking Skills (HOTS) sehingga siswa mampu berpikir kritis, logis, dan analitis dalam menghadapi tantangan abad ke-21.<br><br>Metode pembelajaran yang diterapkan bersifat variatif dan berpusat pada siswa, sehingga mampu merangsang keaktifan dalam berpikir, berpendapat, bereksplorasi, serta berdaya cipta. Melalui pendekatan ini, siswa diharapkan dapat mengembangkan pengetahuan, keterampilan, dan karakter secara optimal sebagai bekal untuk melanjutkan pendidikan ke jenjang yang lebih tinggi serta berkontribusi di tingkat nasional maupun global.  </p>
+      <div class="content-image-wrapper">
+        <img src="Images/kurikulum_1.JPG" class="body-image" alt="">
+      </div>
+      <p>Pengembangan kurikulum dilakukan pada aspek substansi, cakupan, alur, serta strategi pembelajaran. Dalam pelaksanaannya, SMA Unggul Del mendapat dukungan dari Universitas Negeri Jakarta (UNJ) sebagai mitra dalam Program Sekolah Garuda Transformasi. Dukungan ini mencakup pendampingan penguatan kompetensi global siswa, antara lain melalui pembinaan akademik dan persiapan ujian internasional seperti SAT dan IELTS, guna meningkatkan daya saing siswa di tingkat nasional dan internasional. </p>
+    </section>
+
+    <section id="tenaga" class="content-block">
+      <h2 class="block-heading">Tenaga Pendidik</h2>
+      <p>Tenaga pendidik SMA Unggul Del terdiri dari para pengajar yang kompeten, profesional, dan berpengalaman di bidangnya. Mereka memiliki kualifikasi yang tinggi serta komitmen kuat dalam mendukung proses pembelajaran yang berkualitas. Dengan kemampuan pedagogik yang baik dan dedikasi terhadap pengembangan potensi siswa, para pendidik berperan aktif dalam menciptakan lingkungan belajar yang efektif, inspiratif, dan berorientasi pada pengembangan karakter serta prestasi peserta didik</p>
+      <table class="guru-table">
+        <thead>
+            <tr>
+            <th>No</th>
+            <th>Kode</th>
+            <th>Nama Guru</th>
+            <th>Mapel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>ADP</td><td>Arini Desianti Parawi</td><td>Fisika</td></tr>
+            <tr><td>2</td><td>ADS</td><td>Ari Raharja</td><td>Kimia</td></tr>
+            <tr><td>3</td><td>AGS</td><td>Agustina Salia</td><td>Kimia</td></tr>
+            <tr><td>4</td><td>AHG</td><td>Ahong Riski J. Sihotang</td><td>Fisika</td></tr>
+            <tr><td>5</td><td>APF</td><td>Ariska Pinem</td><td>Bimbingan dan Konseling</td></tr>
+            <tr><td>6</td><td>ALI</td><td>Ali Hamzani Hasibuan</td><td>Pendidikan Agama Islam</td></tr>
+            <tr><td>7</td><td>AMG</td><td>Anza Mei Gani Ginting</td><td>Bahasa Inggris Tingkat Lanjut</td></tr>
+            <tr><td>8</td><td>AUR</td><td>August R. Sirait</td><td>Sejarah</td></tr>
+            <tr><td>9</td><td>BAP</td><td>Basawandi Putra Damanik</td><td>PJOK</td></tr>
+            <tr><td>10</td><td>DAS</td><td>Delvi Afriana Saragih</td><td>Matematika</td></tr>
+            <tr><td>11</td><td>DDI</td><td>Donovan Gostario Simaremare</td><td>Bahasa Inggris</td></tr>
+            <tr><td>12</td><td>DNS</td><td>Dian Nursanti Sibarani</td><td>Pendidikan Agama Kristen</td></tr>
+            <tr><td>13</td><td>DSS</td><td>Dewi Shanty Simanjuntak</td><td>Bahasa Indonesia</td></tr>
+            <tr><td>14</td><td>EFA</td><td>Eva Frianti Br. Regar</td><td>Fisika</td></tr>
+            <tr><td>15</td><td>EFT</td><td>Efrida Fitri</td><td>Matematika</td></tr>
+            <tr><td>16</td><td>EKS</td><td>Erika Siboro</td><td>Sejarah</td></tr>
+            <tr><td>17</td><td>ELP</td><td>Elisabet Siahaan</td><td>Biologi</td></tr>
+            <tr><td>18</td><td>FLP</td><td>Flavia Pasaribu</td><td>Pendidikan Agama Katolik</td></tr>
+            <tr><td>19</td><td>GOR</td><td>Ghidion Apolius Rajagukguk</td><td>Biologi</td></tr>
+            <tr><td>20</td><td>HAS</td><td>Machmudin</td><td>SBK</td></tr>
+            <tr><td>21</td><td>HOT</td><td>Hotmarito Nainggolan</td><td>Bahasa Indonesia</td></tr>
+            <tr><td>22</td><td>INT</td><td>Immanuel Panjaitan</td><td>Matematika Tingkat Lanjut</td></tr>
+            <tr><td>23</td><td>JAN</td><td>Juliana Andriani Nababan</td><td>Ekonomi</td></tr>
+            <tr><td>24</td><td>JES</td><td>Jona E. R. Sitanggang</td><td>Matematika</td></tr>
+            <tr><td>25</td><td>JTP</td><td>Jansen Subroto Pardede</td><td>Informatika</td></tr>
+            <tr><td>26</td><td>LAS</td><td>Lidia Aggriani Sartika Purba</td><td>Bimbingan dan Konseling</td></tr>
+            <tr><td>27</td><td>MKS</td><td>Mery Kristina Siallagan</td><td>Bahasa Inggris</td></tr>
+            <tr><td>28</td><td>MNS</td><td>Melisa Sitompul</td><td>Bahasa Indonesia</td></tr>
+            <tr><td>29</td><td>PRK</td><td>Putri Rosida Rosmauli</td><td>Kimia</td></tr>
+            <tr><td>30</td><td>RPM</td><td>Ruth Paskarina Misskalita Br. Ginting</td><td>Bimbingan dan Konseling</td></tr>
+            <tr><td>31</td><td>RSS</td><td>Romauly Siska Simanjuntak</td><td>Pendidikan Agama Kristen</td></tr>
+            <tr><td>32</td><td>RTR</td><td>Rinto Tampubolon</td><td>Bahasa Inggris</td></tr>
+            <tr><td>33</td><td>SNT</td><td>Serius Duprisel Lubis</td><td>PPKN</td></tr>
+            <tr><td>34</td><td>SGY</td><td>Steffanie Grace Y. Panjaitan</td><td>Prakarya dan Kewirausahaan</td></tr>
+            <tr><td>35</td><td>SMG</td><td>Sinta Marisi Gultom</td><td>Bahasa Jerman</td></tr>
+            <tr><td>36</td><td>SUN</td><td>Sun Lyhood Hutagalung</td><td>PJOK</td></tr>
+            <tr><td>37</td><td>TSM</td><td>Tiodor Sri Juniati Manalu</td><td>Biologi</td></tr>
+            <tr><td>38</td><td>VTS</td><td>Veftiana Silalahi</td><td>Fisika</td></tr>
+            <tr><td>39</td><td>WAZ</td><td>Weni Ayu Sunita Zandroto</td><td>Geografi</td></tr>
+        </tbody>
+        </table>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <p>© 2026 SMA Unggul Del. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

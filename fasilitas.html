@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fasilitas - SMA Unggul Del</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 100;
+    }
+
+    nav {
+      line-height: 1;
+      max-width: 1400px;
+      margin: auto;
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img { height: 60px; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-cta {
+      background: #3b5aa3;
+      color: #ffffff !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* ================= LAYOUT ================= */
+    .container {
+      display: flex;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+    }
+
+    .sidebar {
+      width: 300px;
+      position: sticky;
+      top: 120px;
+      height: calc(100vh - 120px);
+      padding-right: 2rem;
+      border-right: 1px solid #e5e7eb;
+      overflow-y: auto;
+    }
+
+    .sidebar h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar ul { list-style: none; }
+
+    .sidebar li { margin-bottom: 1rem; }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+
+    .sidebar a:hover {
+      color: #2f4a88;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 0 0 80px 4rem;
+      padding-top: 120px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+    }
+
+    .main-content > p {
+      font-size: 1.05rem;
+      color: #374151;
+      max-width: 800px;
+      margin-bottom: 3rem;
+    }
+
+    .content-block {
+      margin-bottom: 5rem;
+      scroll-margin-top: 120px;
+    }
+
+    .block-heading {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .block-heading::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 50%;
+      height: 2px;
+      background-color: #2f4a88;
+    }
+
+    .content-block p {
+      font-size: 1.05rem;
+      color: #374151;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+
+    .content-image-wrapper {
+      margin: 2.5rem 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .body-image {
+      max-width: 50%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* ================= FACILITY CARDS ================= */
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .card ul {
+      padding-left: 1.2rem;
+    }
+
+    .card li {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      padding: 2rem;
+      color: #374151;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 1024px) {
+      .sidebar { display: none; }
+      .main-content { padding-left: 0; }
+      .body-image { max-width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">
+      <img src="Images/title_card.png" alt="SMA Unggul Del Logo">
+    </div>
+    <ul>
+      <li><a href="website.html">Home</a></li>
+      <li><a href="about.html">Tentang Kami</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="kegiatan.html">Kegiatan</a></li>
+      <li><a href="pota.html" class="nav-cta">POTA</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Quick Navigation</h3>
+      <ul>
+        <li><a href="#asrama">Asrama</a></li>
+        <li><a href="#kantin">Kantin</a></li>
+        <li><a href="#laboratorium">Laboratorium</a></li>
+        <li><a href="#perpustakaan">Perpustakaan</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h1 class="section-title">Fasilitas SMA Unggul Del</h1>
+      <p>SMA Unggul Del menyediakan ekosistem belajar modern yang dirancang untuk membangkitkan rasa ingin tahu serta potensi setiap siswa. Mulai dari ruang kelas berbasis teknologi yang interaktif hingga laboratorium sains mutakhir, setiap sudut sekolah ini dibangun untuk mendukung eksplorasi tanpa batas. Tidak hanya fokus pada aspek akademis, fasilitas kami juga mencakup perpustakaan digital yang komprehensif, sarana olahraga outdoor, serta asrama yang nyaman untuk membentuk karakter dan kemandirian siswa dalam lingkungan yang asri dan kondusif.</p>
+      <section id="asrama" class="content-block">
+        <h2 class="block-heading">Asrama</h2>
+        <p>Asrama SMA Unggul Del dilengkapi dengan berbagai fasilitas untuk mendukung berbagai kegiatan para siswa.</p>
+        <div class="content-image-wrapper">
+         <img src="Images/asrama_1.jpg" alt="Asrama" class="body-image">
+        </div>
+        <h2>Informasi Asrama SMA Unggul Del</h2>
+
+    <div class="facility-grid">
+        <div class="card">
+            <h3>Bangunan & Kamar</h3>
+            <ul>
+                <li>Gedung: 2 gedung Aspa dan 2 gedung Aspi (Masing-masing 2 lantai).</li>
+                <li>Kapasitas: 6 siswa per kamar.</li>
+                <li>Fasilitas Kamar: Bunkbed, kasur, dan lemari untuk setiap siswa.</li>
+                <div class="content-image-wrapper">
+                <img src="Images/kamar_1.jpg" alt="Kamar" class="body-image">
+                </div>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Fasilitas Pendukung</h3>
+            <ul>
+                <li>Sanitasi: 18 Ruang toilet, 18 ruang shower, dan area wastafel.</li>
+                <li>Area Fungsional:Ruang setrika, pantry, ruang cuci, jemuran, dan gudang.</li>
+                <div class="content-image-wrapper">
+                <img src="Images/fasilitas_asrama.jpg" alt="Fasilitas Asrama" class="body-image">
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Pembinaan & Filosofi</h3>
+    <p>Asrama dikelola dengan suasana kekeluargaan yang dibimbing oleh pembina dari kalangan pendeta. Para pembina berperan sebagai Bapak, Ibu, Abang, dan Kakak Asrama.</p>
+    
+    <p>Kehidupan asrama didasarkan pada nilai filosofi Del:</p>
+    <ul>
+        <li><span class="highlight">MARTUHAN</span> (Ber-Tuhan)</li>
+        <li><span class="highlight">MARROHA</span> (Berhati nurani)</li>
+        <li><span class="highlight">MARBISUK</span> (Bijaksana)</li>
+    </ul>
+    <br>
+
+    <h3>Rutinitas</h3>
+    <p>Siswa menjalani jadwal teratur setiap harinya, mencakup seluruh aktivitas dari bangun pagi, kegiatan sekolah, hingga waktu istirahat malam.</p>
+        
+      </section>
+
+      <section id="kantin" class="content-block">
+        <h2 class="block-heading">Kantin</h2>
+        <p>Kantin SMA Unggul Del menyediakan menu makanan yang bergizi dan sehat untuk semua siswa. Menu yang disediakan selalu memenuhi standar gizi, sehingga siswa bisa melaksanakan aktivitas sekolah dengan sehat dan prima. Seluruh siswa, khususnya selama Kegiatan Belajar Mengajar berlangsung, diwajibkan makan 3 (tiga) kali sehari di kantin.</p>
+        <div class="content-image-wrapper">
+          <img src="Images/kantin_1.jpg" alt="Kantin" class="body-image">
+        </div>
+        <p>Jam makan siswa yang berlaku di kantin SMA Unggul Del selama masa sekolah setiap minggunya sebagai berikut:</p>
+        <div class="facility-grid">
+        <div class="card">
+            <h3>Hari Senin-Jumat</h3>
+            <ul>
+                <li>Makan Pagi: Pukul 06.30-06.45</li>
+                <li>Makan Siang: Pukul 12.45-13.45 (istirahat sekolah)</li>
+                <li>Makan Malam: Pukul 18.45-19.00</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Hari Sabtu</h3>
+            <ul>
+                <li>Makan Pagi: Pukul 06.30-06.45</li>
+                <li>Makan Siang: Pukul 12.45-13.00</li>
+                <li>Makan Malam: Pukul 18.45-19.00</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Hari Minggu</h3>
+            <ul>
+                <li>Makan Pagi: Pukul 06.45-07.0</li>
+                <li>Makan Siang: Pukul 12.00-12.15</li>
+                <li>Makan Malam: Pukul 18.45-19.00</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <p>Untuk hari Minggu siang, siswa diperbolehkan untuk makan di luar / tidak makan di kantin.
+       <br>
+       Selain jadwal wajib makan tersebut, para siswa juga disediakan snack sore yang diberikan kepada siswa setiap pulang sekolah (pukul 16.00 WIB).</p>
+       <div class="content-image-wrapper">
+          <img src="Images/ompreng_1.jpg" alt="Ompreng Makan" class="body-image">
+        </div>
+    <p>Dalam pelaksanaan makan, siswa juga dilatih untuk memiliki manner sehingga setiap siswa dapat menjaga sikap selama acara makan berlangsung. Etika makan yang berlaku adalah sebagai berikut:</p>  
+    <li>Membawa dan menggunakan sendok dan garpu masing-masing.</li>
+    <li>Mulut tertutup rapat pada saat mengunyah makanan dan berbicara seperlunya (tidak menimbulkan suara terlalu keras sehingga tidak mengganggu orang lain).</li>
+    <li>Tidak menimbulkan bunyi pada peralatan makan (ompreng).</li>
+    <li>Mengambil makanan secukupnya dan menghabiskannya tanpa ada sisa.</li>
+    <li>Siswa berpakaian rapi dan bersih saat masuk ke kantin (tidak diperkenankan menggunakan celana pendek dan sandal jepit)</li>
+    
+  </section>
+
+      <section id="laboratorium" class="content-block">
+        <h2 class="block-heading">Laboratorium</h2>
+        <p>Siswa memiliki akses penuh ke berbagai laboratorium yang dilengkapi dengan peralatan terbaru untuk mendukung praktikum dan penelitian mandiri.<br><br>Laboratorium yang tersedia di SMA Unggul Del adalah:</p>
+        <li>Laboratorium Biologi</li>
+        <li>Laboratorium Fisika</li>
+        <li>Laboratorium Kimia</li>
+        <li>Laboratorium Komputer</li>
+      </section>
+
+      <section id="perpustakaan" class="content-block">
+        <h2 class="block-heading">Perpustakaan</h2>
+        <p>Pengorganisasian dan pengklasifikasian bahan pustaka di Perpustakaan SMA Unggul Del berpedoman pada sistem standar internasioal Dewey Decimal Classification (DDC) Edisi 23  dengan sistem perpustakaan telah terautomasi menggunakan sistem aplikasi SENAYAN dan OPAC (Online Public Acces Catalog).</p>
+        <div class="content-image-wrapper">
+          <img src="Images/perpus_1.jpg" alt="Ompreng Makan" class="body-image">
+        </div>
+        <p>Layanan Perpustakaan SMA Unggul Del terdiri atas :</p>
+        <ol>
+          <li>Layanan Sirkulasi, yaitu Layanan transaksi peminjaman, pengembalian dan perpanjangan masa peminjaman buku perpustakaan.</li>
+          <li>Layanan Pemesanan Peminjaman Buku, yaitu Pemesanan judul buku yang sedang dipinjam oleh pemustaka lain untuk dapat segera dipinjam oleh si pemesan setelah buku tersebut tersedia di perpustakaan.</li>
+          <li>Layanan Audiovisual, yaitu pelayanan penyediaan fasilitas komputer, akses internet di ruang audiovisual serta pemakaian koleksi audiovisual berupa CD/DVD oleh pemustaka. Layanan audiovisual dibagi menjadi Layanan Audiovisual pemakaian komputer dan Layanan Audiovisual pemakaian CD/DVD dengan jadwal layanan sampai pukul 20.30 WIB.</li>
+          <li>Layanan Referensi, yaitu layanan untuk membantu pengguna perpustakaan menemukan informasi serta memanfaatkan koleksi perpustakaan semaksimal mungkin.</li>
+          <li>Layanan Pendidikan Pemustaka, yaitu perpustakaan secara berkala menyelenggarakan kegiatan orientasi pengenalan sistem perpustakaan, peraturan, layanan, fasilitas tentang cara penggunaan katalog online, penelusuran serta pemanfaatan koleksi bahan pustaka secara efektif dan efesien yang dilakukan setiap sekali setahun bagi siswa/i baru.</li>
+        </ol>
+        <div class="content-image-wrapper">
+          <img src="Images/perpus_4.png" alt="kurikulum" class="body-image">
+        </div>
+        <p>Prestasi Perpustakaan SMA Unggul Del adalah sebagai berikut:</p>
+        <ol>
+          <li>Tahun 2015 Perpustakaan SMA Unggul Del meraih juara III sebagai Perpustakaan SMA terbaik se-Provinsi Sumatera Utara.</li>
+          <li>Pemenang I dalam kegiatan “Pemilihan Tenaga Perpustakaan Berprestasi Jentang SMA Tingkat Provinsi Sumatera UtaraTahun 2017” yang diselenggarakan oleh Dinas Pendidikan Provinsi Sumatera Utara pada tanggal 19 s.d 22 Juli 2017 Tahun 2017</li>
+          <li>Pemenang II dalam kegiatan “Pemilihan Tenaga Perpustakaan Berprestasi Jentang SMA Tingkat Provinsi Sumatera UtaraTahun 2017” yang diselenggarakan oleh Dinas Pendidikan Provinsi Sumatera Utara pada tanggal 19 s.d 22 Juli 2017 Tahun 2017</li>
+        </ol>
+        <div class="content-image-wrapper">
+          <img src="Images/perpus_3.jpg" alt="Ompreng Makan" class="body-image">
+        </div>
+        </section>
+    </main>
+  </div>
+
+  <footer style="text-align: center; padding: 2rem; border-top: 1px solid #e5e7eb;">
+    <p>© 2026 SMA Unggul Del. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

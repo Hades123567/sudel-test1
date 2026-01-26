@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Kami - SMA Unggul Del</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 100;
+    }
+
+    nav {
+      line-height: 1;
+      max-width: 1400px;
+      margin: auto;
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-cta {
+      background: #3b5aa3;
+      color: #ffffff !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* ================= HERO SECTION ================= */
+    .hero-section {
+      margin-top: 85px;
+      position: relative;
+      min-height: 50vh;
+      background: url("Images/prabu_19.jpg") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Dark overlay */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+      padding: 0 10%;
+      color: #ffffff;
+    }
+
+    .hero-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-content p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      max-width: 700px;
+    }
+
+    .hero-accent {
+      width: 60px;
+      height: 4px;
+      background: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+    .mission-list {
+      margin-left: 1.2rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .mission-list li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* ================= CONTENT SECTION ================= */
+    .content-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 10% 60px;
+    }
+
+    .text-block {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+    .content-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 5% 60px; /* Adjusted padding for better fit */
+    }
+
+    /* Flex container to hold text and images side by side */
+    .vision-mission-container {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .text-block {
+      flex: 2; /* Takes up more space for text */
+      font-size: 1.1rem;
+    }
+
+    /* Sidebar for the two vertical images */
+    .image-sidebar {
+      flex: 1; /* Takes up less space for images */
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .image-sidebar img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive adjustment for mobile */
+    @media (max-width: 768px) {
+      .vision-mission-container {
+        flex-direction: column;
+      }
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 40px;
+    }
+   /* ================= GALLERY ================= */
+    .gallery-section {
+    margin-top: 0px;
+    }
+
+    
+    .gallery-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    }
+
+    .gallery-viewport {
+    width: 960px;
+    height: 380px;          
+    overflow: hidden;      
+    }
+    .gallery-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.35s ease-out;
+    }
+
+
+
+    /* Track */
+    .gallery-track img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    flex-shrink: 0; 
+    }
+
+    /* Arrows */
+    .gallery-btn {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #000;
+    user-select: none;
+    }
+
+    .gallery-btn:hover {
+    opacity: 0.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+    .gallery-viewport {
+        width: 640px; /* show 2 */
+    }
+    }
+
+    @media (max-width: 700px) {
+    .gallery-viewport {
+        width: 300px; /* show 1 */
+    }
+    }
+    .gallery-heading {
+     text-align: center;
+     margin-bottom: 28px;
+    }
+
+    .gallery-heading h3 {
+     font-family: 'Inter', sans-serif;
+     font-size: 1.7rem;
+     color: #9c9fa7;
+     font-weight: 600;
+     margin: 0;
+    }
+
+    .content-image-wrapper {
+      margin: 2.5rem 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .body-image {
+     width: 100%;
+     max-width: 480px;   /* adjust as needed */
+     height: auto;
+     border-radius: 12px; /* optional, looks nice */
+    }
+    .logo a {
+    display: inline-block;
+    }
+
+    .logo img {
+    cursor: pointer;
+    }
+
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="website.html">
+            <img src="Images/title_card.png" alt="SMA Unggul Del Logo">
+        </a>
+        </div>
+
+      <ul>
+        <li><a href="website.html">Home</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="program.html">Program</a></li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="pota.html" class="nav-cta">POTA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= HERO BACKGROUND SECTION ================= -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-accent"></div>
+      <h2>Prabu</h2>
+      <h3>(Program Adaptasi Budaya Unggul)</h3>
+    </div>
+  </section>
+
+  <!-- ================= WHITE CONTENT CONTINUATION ================= -->
+  <main class="content-section">
+  <div class="vision-mission-container">
+    
+    <div class="text-block">
+        <p>
+        Para siswa/i SMA Unggul Del yang telah dinyatakan lulus merupakan pribadi dengan kemampuan intelektual yang tinggi. Namun, di tengah dinamika peradaban, perkembangan zaman, dan kemajuan teknologi yang pesat, siswa tidak hanya dituntut unggul secara akademik. Oleh karena itu, institusi pendidikan perlu memastikan bahwa kemampuan intelektual tersebut berjalan seimbang dengan pengembangan emosional dan spiritual.
+        </p>
+        <br>
+        <p>
+        Dalam rangka menyambut siswa-siswi baru, SMA Unggul Del secara rutin menyelenggarakan Program Adaptasi Budaya Unggul (PRABU) dan Pra-Asrama pada setiap awal tahun ajaran.
+        </p>
+        <br>
+        <p>
+        PRABU bertujuan untuk mempersiapkan siswa/i baru agar mampu menjalani kehidupan berasrama secara matang, baik secara psikologis maupun fisik.<br>
+        Melalui kegiatan ini, siswa diperkenalkan pada budaya, tata tertib, serta nilai-nilai kehidupan berasrama yang akan menjadi bagian dari keseharian mereka selama tiga tahun menempuh pendidikan di SMA Unggul Del.
+        </p>
+        <br>
+        <p>
+        Selain itu, PRABU juga berfungsi untuk menumbuhkan kedisiplinan, memperkenalkan lingkungan sekolah, sistem pembelajaran, serta budaya sekolah yang mencerminkan karakter siswa unggul.<br>
+        Kegiatan ini diisi dengan berbagai sosialisasi nilai sosial, aturan, dan pembiasaan positif yang dirancang untuk membentuk pribadi yang berintegritas dan bertanggung jawab.
+        </p>
+        <br>
+        <p>
+        Sebagai landasan pembentukan karakter, filosofi hidup <strong>3M</strong> yang menjadi nilai utama keluarga besar SMA Unggul Del ditanamkan kepada siswa/i baru melalui kegiatan seminar dan pembinaan.
+        </p>
+        <div class="content-image-wrapper">
+         <img src="Images/prabu_2.jpg" alt="Asrama" class="body-image">
+        </div>
+        <p>
+        Tim Panitia PRABU yang terdiri dari siswa, guru, dan staf SMA Unggul Del secara bersama-sama membimbing siswa/i baru dalam melatih kedisiplinan serta menghayati budaya asrama. Melalui pendampingan ini, siswa juga diperkenalkan dengan pelaksanaan kegiatan akademik yang akan mereka jalani selama menempuh pendidikan di SMA Unggul Del.
+        </p>
+        <br>
+        <p>
+        Pada pelatihan sistem asrama, siswa/i baru diajak untuk mengenal fasilitas dan lingkungan asrama secara langsung.<br>
+        Kegiatan ini dipimpin oleh Bapak dan Ibu Asrama dengan pendampingan kakak-abang mentor, meliputi pembiasaan kegiatan sehari-hari seperti memasang sprei, mencuci pakaian, beradaptasi dengan jadwal ibadah dan waktu tidur, hingga pelaksanaan survei asrama.
+        </p>
+        <br>
+        <p>
+        Rangkaian kegiatan akademik diisi dengan pengenalan visi dan misi sekolah, sistem akademik, serta budaya sekolah.<br>
+        Selain itu, siswa/i baru juga mendapatkan penjelasan mengenai peminatan jurusan, sosialisasi perpustakaan dan laboratorium, panduan pelaksanaan dan tata tertib sekolah, seminar pengembangan karakter, pelatihan Peraturan Baris-Berbaris (PBB), games, science project, serta sesi unjuk bakat.
+        </p>
+        <br>
+        <p>
+        Seluruh rangkaian kegiatan tersebut dirancang untuk melatih kekompakan, kreativitas, kedisiplinan, serta membangun kebersamaan melalui kegiatan outbound.<br>
+        Melalui kegiatan PRABU ini, diharapkan siswa/i baru mampu beradaptasi dan mengikuti ritme perjalanan hidup di SMA Unggul Del dengan baik.
+        </p>
+
+
+      
+    </div>
+<!-- ================= GALLERY SECTION ================= -->
+  </div>
+</section>
+
+
+  </div>
+   <section class="gallery-section">
+    <div class="gallery-heading">
+    <h3>Gallery</h3>
+    </div>
+
+
+  <div class="gallery-wrapper">
+
+    <button class="gallery-btn left" onclick="moveSlide(-1)">
+      &#10094;
+    </button>
+
+    <div class="gallery-viewport">
+      <div class="gallery-track" id="galleryTrack">
+        <img src="Images/prabu_4.jpg" alt="">
+        <img src="Images/prabu_5.jpg" alt="">
+        <img src="Images/prabu_6.jpg" alt="">
+        <img src="Images/prabu_7.jpg" alt="">
+        <img src="Images/prabu_8.jpg" alt="">
+        <img src="Images/prabu_9.jpg" alt="">
+        <img src="Images/prabu_10.jpg" alt="">
+        <img src="Images/prabu_11.jpg" alt="">
+        <img src="Images/prabu_12.jpg" alt="">
+        <img src="Images/prabu_13.jpg" alt="">
+        <img src="Images/prabu_14.jpg" alt="">
+        <img src="Images/prabu_15.jpg" alt="">
+        <img src="Images/prabu_16.jpg" alt="">
+        <img src="Images/prabu_17.jpg" alt="">
+      </div>
+    </div>
+
+    <button class="gallery-btn right" onclick="moveSlide(1)">
+      &#10095;
+    </button>
+</main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 SMA Unggul Del. All rights reserved.</p>
+  </footer>
+
+  <script>
+let index = 0;
+
+function moveSlide(direction) {
+  const track = document.getElementById("galleryTrack");
+  const images = track.children;
+
+  const visibleImages =
+    window.innerWidth < 700 ? 1 :
+    window.innerWidth < 1000 ? 2 : 3;
+
+  const imageWidth = images[0].offsetWidth + 30;
+  const maxIndex = images.length - visibleImages;
+
+  index += direction;
+
+  // 🔁 Infinite loop
+  if (index > maxIndex) index = 0;
+  if (index < 0) index = maxIndex;
+
+  track.style.transform = `translateX(${-index * imageWidth}px)`;
+}
+</script>
+
+
+
+
+
+</body>
+</html>

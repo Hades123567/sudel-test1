@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Kami - SMA Unggul Del</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 100;
+    }
+
+    nav {
+      line-height: 1;
+      max-width: 1400px;
+      margin: auto;
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-cta {
+      background: #3b5aa3;
+      color: #ffffff !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* ================= HERO SECTION ================= */
+    .hero-section {
+      margin-top: 85px;
+      position: relative;
+      min-height: 50vh;
+      background: url("Images/inag_1.png") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Dark overlay */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+      padding: 0 10%;
+      color: #ffffff;
+    }
+
+    .hero-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-content p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      max-width: 700px;
+    }
+
+    .hero-accent {
+      width: 60px;
+      height: 4px;
+      background: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+    .mission-list {
+      margin-left: 1.2rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .mission-list li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* ================= CONTENT SECTION ================= */
+    .content-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 10% 60px;
+    }
+
+    .text-block {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #3b5aa3;
+      margin-bottom: 1rem;
+    }
+    .content-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 5% 60px; /* Adjusted padding for better fit */
+    }
+
+    /* Flex container to hold text and images side by side */
+    .vision-mission-container {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .text-block {
+      flex: 2; /* Takes up more space for text */
+      font-size: 1.1rem;
+    }
+
+    /* Sidebar for the two vertical images */
+    .image-sidebar {
+      flex: 1; /* Takes up less space for images */
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .image-sidebar img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive adjustment for mobile */
+    @media (max-width: 768px) {
+      .vision-mission-container {
+        flex-direction: column;
+      }
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 40px;
+    }
+   /* ================= GALLERY ================= */
+    .gallery-section {
+    margin-top: 0px;
+    }
+
+    
+    .gallery-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    }
+
+    .gallery-viewport {
+    width: 960px;
+    height: 380px;          /* 👈 SAME as image height */
+    overflow: hidden;      /* hides both X and Y */
+    }
+    .gallery-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.35s ease-out;
+    }
+
+
+
+    /* Track */
+    .gallery-track img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    flex-shrink: 0; /* 👈 THIS LINE FIXES EVERYTHING */
+    }
+
+    /* Arrows */
+    .gallery-btn {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #000;
+    user-select: none;
+    }
+
+    .gallery-btn:hover {
+    opacity: 0.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+    .gallery-viewport {
+        width: 640px; /* show 2 */
+    }
+    }
+
+    @media (max-width: 700px) {
+    .gallery-viewport {
+        width: 300px; /* show 1 */
+    }
+    }
+    .gallery-heading {
+     text-align: center;
+     margin-bottom: 28px;
+    }
+
+    .gallery-heading h3 {
+     font-family: 'Inter', sans-serif;
+     font-size: 1.7rem;
+     color: #9c9fa7;
+     font-weight: 600;
+     margin: 0;
+    }
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="Images/title_card.png" alt="SMA Unggul Del Logo">
+      </div>
+      <ul>
+        <li><a href="website.html">Home</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="program.html">Program</a></li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="pota.html" class="nav-cta">POTA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= HERO BACKGROUND SECTION ================= -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-accent"></div>
+      <h2>Inaugurasi dan Wisuda</h2>
+    </div>
+  </section>
+
+  <!-- ================= WHITE CONTENT CONTINUATION ================= -->
+  <main class="content-section">
+  <div class="vision-mission-container">
+    
+    <div class="text-block">
+      <p>
+        Rangkaian akhir dari pelepasan siswa kelas XII dan acara puncak penerimaan siswa baru SMA Unggul Del dilaksanakan dalam suatu kegiatan Wisuda dan Inaugurasi Siswa SMA Unggul Del. Kegiatan Wisuda Siswa Kelas XII dan Inaugurasi Siswa Baru merupakan program rutin bidang Akademik dan bidang Kesiswaan yang telah direncanakan dalam kalender kegiatan sekolah.<br><br>Siswa yang telah menyelesaikan proses pembelajaran selama tiga tahun akan dilepas dan dikembalikan kepada orang tua dan pada saat bersamaan akan dilakukan inaugurasi bagi para calon siswa baru yang telah dianggap sah menjadi bagian dari civitas SMA Unggul Del untuk mengikuti proses pembelajaran. Kegiatan ini adalah simbolisasi pelepasan siswa dan pengakuan sekaligus penghargaan kepada setiap siswa yang telah berhasil melewati proses pembelajaran di SMA Unggul Del dan telah melalui berbagai tahapan untuk menjadi bagian dari civitas SMA Unggul Del.    
+      </p>
+      <br>
+      
+    </div>
+<!-- ================= GALLERY SECTION ================= -->
+  </div>
+</section>
+
+
+  </div>
+   <section class="gallery-section">
+    <div class="gallery-heading">
+    <h3>Gallery</h3>
+    </div>
+
+
+  <div class="gallery-wrapper">
+
+    <button class="gallery-btn left" onclick="moveSlide(-1)">
+      &#10094;
+    </button>
+
+    <div class="gallery-viewport">
+      <div class="gallery-track" id="galleryTrack">
+        <img src="Images/inag_2.jpg" alt="">
+        <img src="Images/inag_3.jpg" alt="">
+        <img src="Images/inag_4.jpg" alt="">
+        <img src="Images/inag_5.jpg" alt="">
+        <img src="Images/inag_6.jpg" alt="">
+        <img src="Images/inag_7.jpg" alt="">
+        <img src="Images/inag_8.jpg" alt="">
+        <img src="Images/inag_9.jpg" alt="">
+      </div>
+    </div>
+
+    <button class="gallery-btn right" onclick="moveSlide(1)">
+      &#10095;
+    </button>
+</main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 SMA Unggul Del. All rights reserved.</p>
+  </footer>
+
+  <script>
+let index = 0;
+
+function moveSlide(direction) {
+  const track = document.getElementById("galleryTrack");
+  const images = track.children;
+
+  const visibleImages =
+    window.innerWidth < 700 ? 1 :
+    window.innerWidth < 1000 ? 2 : 3;
+
+  const imageWidth = images[0].offsetWidth + 30;
+  const maxIndex = images.length - visibleImages;
+
+  index += direction;
+
+  // 🔁 Infinite loop
+  if (index > maxIndex) index = 0;
+  if (index < 0) index = maxIndex;
+
+  track.style.transform = `translateX(${-index * imageWidth}px)`;
+}
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POTA | SMA Unggul Del</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1400px;
+      margin: auto;
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-cta {
+      background: #3b5aa3;
+      color: #ffffff !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* ================= POTA SECTION ================= */
+    .pota-wrapper {
+      margin-top: 85px; 
+      padding: 100px 0 100px 0;
+      background-color: #ffffff;
+    }
+
+    .pota-stripe {
+      background-color: #bde4f7;
+      width: 100%;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .text-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    .text-content p {
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
+      max-width: 520px;
+      color: #1f2937;
+    }
+
+    .image-content {
+      position: relative;
+      /* Image expanded to 180% as requested */
+      transform: scale(1.1); 
+      transform-origin: center;
+      margin-bottom: -80px; 
+      top: 80px;
+      z-index: 10;
+    }
+
+    .image-content img {
+      width: 100%;
+      height: auto;
+      display: block;
+      box-shadow: 25px 25px 50px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ================= DETAILS SECTION ================= */
+    .pota-details {
+      max-width: 900px;
+      margin: 200px auto 100px auto; /* Large top margin for the offset image */
+      padding: 0 2rem;
+    }
+
+    .pota-details p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      color: #374151;
+      text-align: justify;
+    }
+
+    .cost-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 3rem 0;
+      font-size: 0.95rem;
+    }
+
+    .cost-table th {
+      text-align: left;
+      padding: 1rem;
+      border-bottom: 2px solid #e5e7eb;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .cost-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .cost-table .total-row {
+      font-weight: 700;
+      background-color: #f9fafb;
+    }
+
+    .donation-box {
+      background: #f3f4f6;
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin-top: 3rem;
+      border-left: 5px solid #3b5aa3;
+    }
+
+    .donation-box h3 {
+      margin-bottom: 1rem;
+      color: #111827;
+    }
+
+    .bank-details {
+      font-family: monospace;
+      font-size: 1.2rem;
+      background: #ffffff;
+      padding: 1rem;
+      display: inline-block;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      padding: 3rem;
+      color: #374151;
+    }
+
+    @media (max-width: 1024px) {
+      .container { grid-template-columns: 1fr; text-align: center; }
+      .text-content p { margin: 0 auto 1.5rem auto; }
+      .image-content { transform: scale(1); margin-top: 3rem; top: 0; margin-bottom: 0; }
+      .pota-details { margin-top: 50px; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo"><img src="Images/title_card.png" alt="Logo"></div>
+      <ul>
+        <li><a href="website.html">Home</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="program.html">Program</a></li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="pota.html" class="nav-cta">POTA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pota-wrapper">
+    <div class="pota-stripe">
+      <div class="container">
+        <div class="text-content">
+          <h2>POTA</h2>
+          <p>Bagi masyarakat menengah ke atas, mereka memiliki banyak pilihan untuk mencari sekolah yang dikehendaki, namun untuk masyarakat kurang mampu mereka seakan tidak memiliki harapan.</p>
+          <p>SMA UNGGUL DEL hadir sebagai solusi untuk menolong mereka memiliki kesempatan mendapatkan pendidikan yang lebih baik.</p>
+        </div>
+        <div class="image-content">
+          <img src="Images/pota_1.JPG" alt="Students">
+        </div>
+      </div>
+    </div>
+
+    <section class="pota-details">
+      <p>SMA Unggul Del telah menetapkan komitmen sesuai Visi dan Misi YAYASAN DEL yaitu menyelenggarakan pendidikan bagi anak – anak dari masyarakat sekitar SMA Unggul Del yang kurang mampu. Hal ini dilakukan sebagai bagian dari bentuk kepedulian sosial kepada masyarakat marginal. Sejak tahun 2012 SMA Unggul Del dipercayakan mengelola program bidang Pendidikan Menengah Atas.</p>
+      
+      <p>SMA Unggul Del adalah sekolah yang dibangun dari keprihatinan terhadap kondisi pendidikan saat ini yang cenderung kurang berpihak kepada masyarakat yang kurang mampu secara ekonomi. Untuk itu, SMA Unggul Del hadir dengan memprioritaskan anak-anak yang memiliki kemampuan akademik namun tidak mampu dalam hal pembiayaan. Saat ini SMA Unggul Del sedang berjalan menggunakan subsidi silang dari semua biaya pendidikan yang diperoleh.</p>
+
+      <p>Adapun rincian biaya pendidikan (biaya per siswa per bulan) yang nantinya akan ditanggung oleh orang tua asuh adalah sebagai berikut:</p>
+
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Uraian</th>
+            <th>Rincian Biaya (Rp)</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1.</td><td>Uang SPP</td><td>1.050.000</td><td></td></tr>
+          <tr><td>2.</td><td>Uang Asrama</td><td>200.000</td><td></td></tr>
+          <tr><td>3.</td><td>Uang Makan (3 kali sehari)</td><td>840.000</td><td>Biaya makan per hari Rp. 28.000</td></tr>
+          <tr><td>4.</td><td>Uang Laboratorium</td><td>50.000</td><td></td></tr>
+          <tr class="total-row"><td></td><td>JUMLAH</td><td>2.140.000</td><td>Total biaya tiap siswa per bulan</td></tr>
+        </tbody>
+      </table>
+
+      <p>Tabel di atas merupakan rincian biaya pendidikan tiap siswa per bulan yang menjadi tanggung jawab dari orang tua asuh. Kami menginformasikan bahwa untuk Tahun Ajaran 2017 – 2018, jumlah siswa SMA Unggul Del yang masih memerlukan bantuan orang tua asuh sebanyak 30 orang.</p>
+
+      <div class="donation-box">
+        <h3>Salurkan Donasi Anda</h3>
+        <p>Donasi Orang Tua Asuh bisa disalurkan melalui:</p>
+        <strong>Bank BNI Cabang Balige</strong><br>
+        <div class="bank-details">603577722</div><br>
+        <strong>An. SMA Unggul Del</strong>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 SMA Unggul Del. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
